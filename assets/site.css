@@ -149,20 +149,16 @@ main {
 .eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
-  letter-spacing: 0.1em;
+  font-size: 10px;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 14px;
-}
-
-.eyebrow::before {
-  content: '';
-  display: block;
-  width: 18px; height: 1px;
-  background: var(--accent);
+  margin-bottom: 12px;
+  border: 1px solid var(--border-hover);
+  background: var(--accent-dim);
+  border-radius: 100px;
+  padding: 3px 10px;
 }
 
 h1 {
@@ -439,6 +435,29 @@ footer {
 }
 .fl-link:hover { color: var(--muted); }
 .fl-copy { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--subtle); }
+
+/* ── BOTTOM CTA ── */
+.cta-section {
+  position: relative;
+  z-index: 1;
+  padding: 96px 32px;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.cta-glow {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 700px; height: 350px;
+  background: radial-gradient(ellipse, rgba(0,209,178,0.14) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.cta-section h2 { position: relative; max-width: 580px; margin: 0 auto 14px; }
+.cta-section p  { font-size: 15px; color: var(--muted); margin-bottom: 32px; position: relative; }
+.cta-section .btn-primary { position: relative; }
 
 @media (prefers-reduced-motion: reduce) {
   .reveal { transition: none; }
