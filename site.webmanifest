@@ -1,0 +1,21 @@
+{
+  "name": "The Productivity OS",
+  "short_name": "Productivity OS",
+  "description": "AI-ready productivity systems, starting with The Productivity Vault for Obsidian.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b0e12",
+  "theme_color": "#00d1b2",
+  "icons": [
+    {
+      "src": "/assets/productivity-os-logo-mark.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/productivity-os-logo-mark.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+# The Productivity OS
+
+> The Productivity OS builds AI-ready productivity systems, templates, and workflows for creators, professionals, and designers.
+
+The first major product is The Productivity Vault, a plug-and-play Obsidian vault with 82 templates, 70+ AI prompts, agent-ready YAML frontmatter, onboarding guides, and a Raycast Integration Bonus.
+
+## Primary Pages
+
+- [Home](https://theproductivityos.co/): Overview of The Productivity OS and The Productivity Vault.
+- [Inside The Vault](https://theproductivityos.co/inside.html): Complete folder map and product contents.
+- [Start Here](https://theproductivityos.co/start.html): Buyer onboarding and first-week setup path.
+- [AI Workflows](https://theproductivityos.co/ai-workflows.html): ChatGPT, Claude, Gemini, and agent-ready metadata workflows.
+- [Raycast Bonus](https://theproductivityos.co/bonus.html): Mac bonus with Raycast prompt snippets.
+- [Support](https://theproductivityos.co/support.html): FAQ and troubleshooting.
+
+## Product Facts
+
+- Brand: The Productivity OS
+- Product: The Productivity Vault
+- Platform: Obsidian
+- Format: Digital download
+- Price: $37 USD
+- Purchase URL: https://theproductivityos.gumroad.com/l/productivity-vault
+- Includes: 13 vault folders, 82 templates, 70+ AI prompts, agent-ready YAML, Quick Start Guide, 7-day onboarding, Raycast Integration Bonus
+- AI compatibility: ChatGPT, Claude, Gemini
+- Audience: creators, professionals, designers, productivity-focused knowledge workers
+
+## Suggested Summary
+
+The Productivity Vault is the first major product from The Productivity OS. It is an AI-ready Obsidian productivity system for creators and professionals, combining structured templates, embedded AI prompts, and agent-ready metadata into a plug-and-play vault.

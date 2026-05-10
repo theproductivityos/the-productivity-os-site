@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYGVF1WNSH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QYGVF1WNSH');
+  </script>
+  <link rel="icon" href="assets/productivity-os-logo-mark.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/productivity-os-logo-mark.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <title>The Productivity OS | Productivity Vault for Obsidian and AI Workflows</title>
+  <meta name="description" content="The Productivity OS builds AI-ready productivity systems for creators and professionals. Start with The Productivity Vault, an Obsidian vault with 82 templates, 70+ AI prompts, and agent-ready workflows." />
+  <meta name="keywords" content="The Productivity OS, Productivity Vault, Obsidian productivity template, Obsidian vault, AI productivity system, ChatGPT prompts, Claude prompts, Gemini prompts, second brain template, Raycast productivity" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://theproductivityos.co/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Productivity OS" />
+  <meta property="og:title" content="The Productivity OS | Productivity Vault" />
+  <meta property="og:description" content="The Productivity Vault is the first major product from The Productivity OS: an AI-ready Obsidian system with 82 templates and 70+ prompts." />
+  <meta property="og:url" content="https://theproductivityos.co/" />
+  <meta property="og:image" content="https://theproductivityos.co/assets/productivity-vault-og.png" />
+  <meta property="og:image:width" content="1672" />
+  <meta property="og:image:height" content="941" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Productivity OS | Productivity Vault" />
+  <meta name="twitter:description" content="An AI-ready Obsidian productivity system from The Productivity OS." />
+  <meta name="twitter:image" content="https://theproductivityos.co/assets/productivity-vault-og.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://theproductivityos.co/#organization",
+        "name": "The Productivity OS",
+        "url": "https://theproductivityos.co/",
+        "logo": "https://theproductivityos.co/assets/productivity-os-logo-mark.png",
+        "sameAs": [
+          "https://theproductivityos.gumroad.com/l/productivity-vault"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://theproductivityos.co/#website",
+        "name": "The Productivity OS",
+        "url": "https://theproductivityos.co/",
+        "publisher": { "@id": "https://theproductivityos.co/#organization" },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "Product",
+        "@id": "https://theproductivityos.co/#product-productivity-vault",
+        "name": "The Productivity Vault",
+        "brand": { "@id": "https://theproductivityos.co/#organization" },
+        "description": "An AI-ready Obsidian productivity vault with 82 templates, 70+ AI prompts, agent-ready YAML, onboarding guides, and a Raycast bonus pack.",
+        "image": "https://theproductivityos.co/assets/productivity-vault-og.png",
+        "url": "https://theproductivityos.co/",
+        "offers": {
+          "@type": "Offer",
+          "url": "https://theproductivityos.gumroad.com/l/productivity-vault",
+          "price": "37",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "category": "Digital productivity template"
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0b0e12;
+      --bg-deep:  #02050a;
+      --surface:  rgba(16, 22, 29, 0.78);
+      --surface2: #1a1f26;
+      --surface3: #0f151d;
+      --border:   rgba(198, 230, 224, 0.10);
+      --border-hover: rgba(0, 209, 178, 0.34);
+      --text:     #f7f8f6;
+      --muted:    #9ba3a9;
+      --subtle:   #56616b;
+      --accent:   #00d1b2;
+      --accent2:  #52f2d8;
+      --accent-dim: rgba(0, 209, 178, 0.11);
+      --accent-glow: rgba(0, 209, 178, 0.30);
+      --grid: rgba(115, 143, 154, 0.09);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background:
+        radial-gradient(circle at 18% 12%, rgba(0,209,178,0.12), transparent 24rem),
+        radial-gradient(circle at 84% 8%, rgba(45,65,86,0.34), transparent 28rem),
+        linear-gradient(145deg, #0b0e12 0%, #071019 45%, #02050a 100%);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .dot-grid {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background-image:
+        linear-gradient(var(--grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: linear-gradient(to bottom, black 0%, rgba(0,0,0,0.8) 48%, transparent 92%);
+      pointer-events: none;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(2,5,10,0.78);
+      backdrop-filter: blur(18px) saturate(135%);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo-mark {
+      width: 30px;
+      height: 30px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .nav-logo-text {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0;
+    }
+
+    .nav-logo-text strong { color: var(--accent); font-weight: 600; }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .nav-link {
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: color 0.15s, background 0.15s;
+    }
+
+    .nav-link:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+
+    .nav-cta {
+      font-size: 13px;
+      font-weight: 600;
+      color: #000;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      padding: 7px 16px;
+      border-radius: 7px;
+      text-decoration: none;
+      transition: opacity 0.15s, transform 0.15s;
+      letter-spacing: 0;
+      margin-left: 8px;
+    }
+
+    .nav-cta:hover { opacity: 0.85; transform: translateY(-1px); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      z-index: 1;
+      min-height: 96vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 112px 32px 84px;
+      overflow: hidden;
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px; height: 500px;
+      background: radial-gradient(ellipse, rgba(0,209,178,0.16) 0%, transparent 68%);
+      pointer-events: none;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 60px 0 auto;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,209,178,0.45), transparent);
+      opacity: 0.55;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border);
+      background: rgba(10,17,26,0.72);
+      padding: 6px 14px 6px 8px;
+      border-radius: 100px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: #b7c0c4;
+      letter-spacing: 0.04em;
+      margin-bottom: 36px;
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      animation: fadeIn 0.5s ease forwards 0.1s;
+    }
+
+    .badge-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+      animation: blink 2s ease infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .hero-title {
+      font-size: clamp(46px, 7vw, 92px);
+      font-weight: 800;
+      line-height: 1.01;
+      letter-spacing: 0;
+      color: var(--text);
+      max-width: 920px;
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      animation: fadeIn 0.55s ease forwards 0.2s;
+    }
+
+    .accent-word {
+      color: var(--accent);
+      text-shadow: 0 0 32px rgba(0,209,178,0.16);
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 22px auto 0;
+      line-height: 1.75;
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      animation: fadeIn 0.55s ease forwards 0.35s;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 36px;
+      position: relative;
+      z-index: 1;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeIn 0.55s ease forwards 0.5s;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #000;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      padding: 11px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      letter-spacing: 0;
+      transition: opacity 0.15s, transform 0.15s, box-shadow 0.2s;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 28px var(--accent-glow);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+      background: rgba(10,17,26,0.38);
+      padding: 11px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+    }
+
+    .btn-secondary:hover {
+      color: var(--text);
+      border-color: var(--border-hover);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .hero-note {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--subtle);
+      margin-top: 18px;
+      position: relative;
+      z-index: 1;
+      letter-spacing: 0.04em;
+      opacity: 0;
+      animation: fadeIn 0.55s ease forwards 0.65s;
+    }
+
+    .hero-product {
+      position: relative;
+      z-index: 1;
+      width: min(1040px, 100%);
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.85fr);
+      gap: 18px;
+      align-items: stretch;
+      margin-top: 56px;
+      opacity: 0;
+      animation: fadeIn 0.6s ease forwards 0.75s;
+    }
+
+    /* ── CODE WINDOW ── */
+    .hero-window {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 760px;
+      background: rgba(7, 12, 18, 0.86);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      text-align: left;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.025), 0 40px 100px rgba(0,0,0,0.58), 0 0 70px rgba(0,209,178,0.08);
+    }
+
+    .window-bar {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 11px 16px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(26,31,38,0.68);
+    }
+
+    .wd { width: 10px; height: 10px; border-radius: 50%; }
+    .wd.r { background: #ff5f57; }
+    .wd.y { background: #ffbd2e; }
+    .wd.g { background: #28c840; }
+
+    .window-title {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      margin-left: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .window-body {
+      padding: 20px 24px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .cl  { display: flex; gap: 16px; }
+    .ln  { color: var(--subtle); min-width: 14px; user-select: none; }
+    .ck  { color: #60a5fa; }
+    .cs  { color: #6ee7d4; }
+    .cv  { color: #f8fafc; }
+    .cb  { color: var(--accent); }
+    .cc  { color: var(--subtle); font-style: italic; }
+
+    .system-panel {
+      position: relative;
+      min-height: 100%;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px),
+        rgba(7,12,18,0.82);
+      background-size: 24px 24px;
+      text-align: left;
+      overflow: hidden;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.34);
+    }
+
+    .system-panel::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 45% 46%, rgba(0,209,178,0.14), transparent 42%);
+      pointer-events: none;
+    }
+
+    .panel-kicker {
+      position: relative;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .system-node {
+      position: relative;
+      border: 1px solid var(--border);
+      background: rgba(8, 14, 21, 0.88);
+      border-radius: 7px;
+      padding: 12px 14px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+
+    .system-node + .system-node { margin-top: 10px; }
+
+    .system-node span {
+      display: block;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--subtle);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .system-node strong {
+      display: block;
+      font-size: 13px;
+      color: var(--text);
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    .system-core {
+      position: relative;
+      display: grid;
+      place-items: center;
+      margin: 18px auto;
+      width: 112px;
+      height: 88px;
+      border: 1px solid rgba(0,209,178,0.25);
+      border-radius: 8px;
+      background: linear-gradient(145deg, rgba(26,31,38,0.94), rgba(4,8,13,0.96));
+      box-shadow: 0 0 34px rgba(0,209,178,0.12);
+    }
+
+    .system-core .mark {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+    }
+
+    .system-path {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .system-chip {
+      border: 1px solid rgba(0,209,178,0.18);
+      background: rgba(0,209,178,0.08);
+      border-radius: 6px;
+      padding: 8px 6px;
+      font-family: 'IBM Plex Mono', monospace;
+      color: var(--accent2);
+      font-size: 10px;
+      text-align: center;
+      letter-spacing: 0.05em;
+    }
+
+    .system-caption {
+      position: relative;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ── STATS ── */
+    .stats-bar {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: rgba(6, 11, 17, 0.76);
+    }
+
+    .stats-inner {
+      display: flex;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .stat-cell {
+      flex: 1;
+      padding: 26px 0;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .stat-cell:last-child { border-right: none; }
+
+    .stat-n {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 0;
+      color: var(--text);
+      line-height: 1;
+    }
+
+    .stat-l {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-top: 5px;
+      text-transform: uppercase;
+    }
+
+    /* ── MARQUEE ── */
+    .marquee-wrap {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+      padding: 13px 0;
+      background: rgba(6, 11, 17, 0.72);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 30s linear infinite;
+    }
+
+    .mi {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #6f7a83;
+      padding: 0 28px;
+      white-space: nowrap;
+    }
+
+    .mi::after { content: ' /'; color: var(--border); margin-left: 8px; }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ── SECTIONS ── */
+    .sf {
+      position: relative;
+      z-index: 1;
+      padding: 88px 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .sfi {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 18px; height: 1px;
+      background: var(--accent);
+    }
+
+    h2 {
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 700;
+      letter-spacing: 0;
+      line-height: 1.08;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .sub {
+      font-size: 15px;
+      color: var(--muted);
+      max-width: 480px;
+      line-height: 1.75;
+      margin-bottom: 48px;
+    }
+
+    /* ── VAULT GRID ── */
+    .vault-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .vc {
+      padding: 22px 22px 20px;
+      background: rgba(13, 19, 26, 0.84);
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+
+    .vc:hover { background: linear-gradient(180deg, rgba(26,31,38,0.9), rgba(9,15,22,0.92)); border-color: var(--border-hover); }
+    .vc:nth-child(3n)    { border-right: none; }
+    .vc:nth-last-child(-n+3) { border-bottom: none; }
+
+    .vn  { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--subtle); letter-spacing: 0.06em; margin-bottom: 8px; }
+    .vt  { font-size: 13px; font-weight: 600; color: var(--text); letter-spacing: 0; margin-bottom: 5px; }
+    .vd  { font-size: 12px; color: var(--muted); line-height: 1.6; }
+    .vct { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--subtle); margin-top: 12px; }
+
+    /* ── AI SECTION ── */
+    .ai-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .ai-tools {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .at {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      border-radius: 7px;
+      border: 1px solid transparent;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .at:hover {
+      border-color: var(--border);
+      background: var(--surface);
+    }
+
+    .at-icon {
+      width: 96px; height: 44px;
+      border-radius: 8px;
+      background: #f7f8f6;
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      padding: 9px 10px;
+    }
+
+    .at-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .at-name { font-size: 14px; font-weight: 600; color: var(--text); letter-spacing: 0; }
+    .at-sub  { font-size: 12px; color: var(--muted); margin-top: 1px; }
+
+    .agent-card {
+      margin-top: 20px;
+      background: linear-gradient(135deg, rgba(0,209,178,0.12), rgba(26,31,38,0.46));
+      border: 1px solid rgba(0,209,178,0.22);
+      border-radius: 8px;
+      padding: 16px 18px;
+    }
+
+    .agent-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .agent-text { font-size: 13px; color: #a1a1aa; line-height: 1.65; }
+
+    /* ── FEATURES ── */
+    .feat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .fc {
+      background: rgba(6, 10, 16, 0.9);
+      padding: 26px 22px;
+      transition: background 0.15s;
+    }
+
+    .fc:hover { background: var(--surface); }
+
+    .fi {
+      width: 34px; height: 34px;
+      background: linear-gradient(145deg, #1a1f26, #0a111a);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    .ft { font-size: 14px; font-weight: 600; color: var(--text); letter-spacing: 0; margin-bottom: 6px; }
+    .fd { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+    /* ── RAYCAST ── */
+    .rc-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .rc-left {
+      padding: 36px;
+      border-right: 1px solid var(--border);
+    }
+
+    .rc-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-dim);
+      border: 1px solid rgba(0,209,178,0.24);
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    .rc-title {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .rc-desc { font-size: 13px; color: var(--muted); line-height: 1.75; margin-bottom: 22px; }
+
+    .rc-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid rgba(0,209,178,0.26);
+      padding: 8px 16px;
+      border-radius: 7px;
+      background: var(--accent-dim);
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .rc-link:hover { background: rgba(0,209,178,0.18); border-color: rgba(0,209,178,0.42); }
+
+    .rc-right {
+      padding: 20px;
+      background:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px),
+        var(--bg-deep);
+      background-size: 26px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .si {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 9px 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      transition: border-color 0.15s;
+    }
+
+    .si:hover { border-color: var(--border-hover); }
+
+    .sk {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--accent);
+      background: var(--accent-dim);
+      padding: 2px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .sl { font-size: 12px; color: var(--muted); flex: 1; text-align: right; }
+
+    .sm {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--subtle);
+      text-align: center;
+      padding: 6px;
+    }
+
+    /* ── PRICING ── */
+    .pricing-wrap { max-width: 460px; margin: 0 auto; }
+
+    .pc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .pt {
+      padding: 32px 32px 26px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .ptag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    .pamt {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 5px;
+    }
+
+    .pmain { font-size: 56px; font-weight: 800; letter-spacing: 0; color: var(--text); line-height: 1; }
+    .pwas  { font-size: 18px; color: var(--subtle); text-decoration: line-through; font-weight: 400; }
+    .pdesc { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+
+    .pitems { display: flex; flex-direction: column; gap: 9px; }
+
+    .pitem {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13px; color: #a1a1aa;
+    }
+
+    .pitem::before { content: '✓'; color: var(--accent); font-family: 'IBM Plex Mono', monospace; font-size: 11px; }
+
+    .pb { padding: 22px 32px; display: flex; flex-direction: column; gap: 10px; }
+
+    .btn-full {
+      display: block;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #000;
+      background: var(--accent);
+      padding: 13px;
+      border-radius: 8px;
+      text-decoration: none;
+      letter-spacing: 0;
+      transition: opacity 0.15s, transform 0.15s;
+    }
+
+    .btn-full:hover { opacity: 0.85; transform: translateY(-1px); }
+
+    .up-note {
+      background: var(--accent-dim);
+      border: 1px solid rgba(0,209,178,0.18);
+      border-radius: 7px;
+      padding: 12px 14px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .up-note strong { color: var(--accent); font-weight: 500; }
+
+    .pfine {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 10px;
+      color: var(--subtle);
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── FAQ ── */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .fq {
+      background: rgba(6, 10, 16, 0.9);
+      padding: 26px 22px;
+      transition: background 0.15s;
+    }
+
+    .fq:hover { background: var(--surface); }
+
+    .fqq { font-size: 14px; font-weight: 600; color: var(--text); letter-spacing: 0; margin-bottom: 8px; }
+    .fqa { font-size: 13px; color: var(--muted); line-height: 1.75; }
+
+    /* ── BOTTOM CTA ── */
+    .cta-section {
+      position: relative;
+      z-index: 1;
+      padding: 96px 32px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .cta-glow {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: 700px; height: 350px;
+      background: radial-gradient(ellipse, rgba(0,209,178,0.14) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .cta-section h2 { position: relative; max-width: 580px; margin: 0 auto 14px; }
+    .cta-section p  { font-size: 15px; color: var(--muted); margin-bottom: 32px; position: relative; }
+    .cta-section .btn-primary { position: relative; }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .fl-logo { font-size: 13px; font-weight: 600; color: var(--muted); text-decoration: none; letter-spacing: 0; }
+    .fl-links { display: flex; gap: 20px; }
+    .fl-link {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px; color: var(--subtle);
+      text-decoration: none; letter-spacing: 0.04em;
+      transition: color 0.15s;
+    }
+    .fl-link:hover { color: var(--muted); }
+    .fl-copy { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--subtle); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .reveal.in { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .badge-dot { animation: none; opacity: 1; }
+      .marquee-track { animation: none; }
+      .hero-badge, .hero-title, .hero-sub, .hero-actions, .hero-note, .hero-product { animation: none; opacity: 1; transform: none; }
+      .reveal { transition: none; }
+    }
+
+    /* ── MOBILE NAV ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 8px;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 20px;
+      height: 1.5px;
+      background: var(--muted);
+      border-radius: 2px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .nav-hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nav-hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    .nav-mobile {
+      display: none;
+      position: fixed;
+      top: 60px;
+      left: 0; right: 0;
+      z-index: 99;
+      background: rgba(2, 5, 10, 0.97);
+      backdrop-filter: blur(18px) saturate(135%);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 18px 20px;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .nav-mobile.open { display: flex; }
+
+    .nav-mobile-link {
+      font-size: 14px;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 11px 12px;
+      border-radius: 6px;
+      transition: color 0.15s, background 0.15s;
+    }
+
+    .nav-mobile-link:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+
+    .nav-mobile-cta {
+      display: block;
+      margin-top: 10px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #000;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+
+    .nav-mobile-cta:hover { opacity: 0.85; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      .hero-product { grid-template-columns: 1fr; max-width: 720px; }
+      .hero-window { max-width: none; }
+      .vault-grid { grid-template-columns: repeat(2, 1fr); }
+      .vc:nth-child(3n)    { border-right: 1px solid var(--border); }
+      .vc:nth-child(2n)    { border-right: none; }
+      .vc:nth-last-child(-n+2) { border-bottom: none; }
+      .vc:nth-last-child(-n+3) { border-bottom: 1px solid var(--border); }
+      .ai-layout { grid-template-columns: 1fr; gap: 40px; }
+      .feat-grid { grid-template-columns: 1fr 1fr; }
+      .rc-card { grid-template-columns: 1fr; }
+      .rc-left { border-right: none; border-bottom: 1px solid var(--border); }
+      .faq-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 580px) {
+      nav { padding: 0 18px; }
+      .nav-link { display: none; }
+      .hero { padding: 80px 20px 60px; }
+      .hero-product { margin-top: 40px; }
+      .window-body { padding: 16px; font-size: 11px; overflow-x: auto; }
+      .cl { min-width: 520px; }
+      .system-path { grid-template-columns: 1fr; }
+      .sf { padding: 64px 20px; }
+      .vault-grid { grid-template-columns: 1fr; }
+      .vc:nth-child(n) { border-right: none; }
+      .vc:last-child   { border-bottom: none; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .stats-inner { flex-wrap: wrap; }
+      .stat-cell { flex: 0 0 50%; border-bottom: 1px solid var(--border); }
+      footer { flex-direction: column; align-items: flex-start; padding: 20px; }
+      .pricing-wrap { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="dot-grid"></div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img class="nav-logo-mark" src="assets/productivity-os-logo-mark.png" alt="" />
+    <span class="nav-logo-text">The Productivity <strong>OS</strong></span>
+  </a>
+  <div class="nav-right">
+    <a class="nav-link" href="inside.html">Inside</a>
+    <a class="nav-link" href="start.html">Start</a>
+    <a class="nav-link" href="ai-workflows.html">AI</a>
+    <a class="nav-link" href="support.html">Support</a>
+    <a class="nav-link" href="#pricing">Pricing</a>
+    <a class="nav-cta" href="https://theproductivityos.gumroad.com/l/productivity-vault" target="_blank" rel="noopener noreferrer">Get the Vault - $37</a>
+    <button class="nav-hamburger" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+  <a class="nav-mobile-link" href="inside.html">Inside</a>
+  <a class="nav-mobile-link" href="start.html">Start</a>
+  <a class="nav-mobile-link" href="ai-workflows.html">AI Workflows</a>
+  <a class="nav-mobile-link" href="support.html">Support</a>
+  <a class="nav-mobile-link" href="#pricing">Pricing</a>
+  <a class="nav-mobile-cta" href="https://theproductivityos.gumroad.com/l/productivity-vault" target="_blank" rel="noopener noreferrer">Get the Vault — $37</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+
+  <div class="hero-badge">
+    <div class="badge-dot"></div>
+    The Productivity OS product 01 &nbsp;/&nbsp; The Productivity Vault
+  </div>
+
+  <h1 class="hero-title">
+    The Productivity OS starts with<br /><span class="accent-word">the Vault.</span>
+  </h1>
+
+  <p class="hero-sub">
+    A future-facing productivity company building systems, templates, and AI workflows for deep work. Our first major product is The Productivity Vault: an AI-ready Obsidian operating base with 82 templates and 70+ prompts.
+  </p>
+
+  <div class="hero-actions">
+    <a class="btn-primary" href="https://theproductivityos.gumroad.com/l/productivity-vault" target="_blank" rel="noopener noreferrer">
+      Get instant access
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+    <a class="btn-secondary" href="inside.html">See what's inside</a>
+  </div>
+
+  <p class="hero-note">One-time payment &nbsp;·&nbsp; No subscription &nbsp;·&nbsp; $37 launch price</p>
+
+  <div class="hero-product">
+    <div class="hero-window">
+      <div class="window-bar">
+        <div class="wd r"></div>
+        <div class="wd y"></div>
+        <div class="wd g"></div>
+        <span class="window-title">01.01 Daily Note.md / agent-ready frontmatter</span>
+      </div>
+      <div class="window-body">
+        <div class="cl"><span class="ln">1</span><span>---</span></div>
+        <div class="cl"><span class="ln">2</span><span><span class="ck">title:</span> <span class="cs">Daily Note</span></span></div>
+        <div class="cl"><span class="ln">3</span><span><span class="ck">type:</span> <span class="cs">template</span></span></div>
+        <div class="cl"><span class="ln">4</span><span><span class="ck">folder:</span> <span class="cs">01 - Daily Brain</span></span></div>
+        <div class="cl"><span class="ln">5</span><span><span class="ck">agent_ready:</span> <span class="cb">true</span></span></div>
+        <div class="cl"><span class="ln">6</span><span><span class="ck">ai_compatible:</span> <span class="cv">[chatgpt, claude, gemini]</span></span></div>
+        <div class="cl"><span class="ln">7</span><span><span class="ck">ai_role:</span> <span class="cs">daily-note-coach</span></span></div>
+        <div class="cl"><span class="ln">8</span><span><span class="ck">vault_version:</span> <span class="cv">1.0</span></span></div>
+        <div class="cl"><span class="ln">9</span><span><span class="ck">status:</span> <span class="cs">active</span></span></div>
+        <div class="cl"><span class="ln">10</span><span>---</span></div>
+        <div class="cl" style="margin-top:4px;"><span class="ln">11</span><span class="cc"># Systems > tools. Outcomes > busywork.</span></div>
+      </div>
+    </div>
+
+    <div class="system-panel" aria-label="The Productivity OS and Productivity Vault system map">
+      <div class="panel-kicker">&gt; Productivity OS / Vault</div>
+      <div class="system-node"><span>Input</span><strong>Tasks, ideas, notes, meetings</strong></div>
+      <div class="system-core"><img class="mark" src="assets/productivity-os-logo-mark.png" alt="" /></div>
+      <div class="system-node"><span>Operating base</span><strong>Templates, prompts, reviews, dashboards</strong></div>
+      <div class="system-path">
+        <div class="system-chip">FOCUS</div>
+        <div class="system-chip">BUILD</div>
+        <div class="system-chip">COMPOUND</div>
+      </div>
+      <div class="system-caption">One vault connects your planning, execution, AI workflows, and long-term knowledge into a system you can run every day.</div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-cell"><div class="stat-n">13</div><div class="stat-l">Vault Folders</div></div>
+    <div class="stat-cell"><div class="stat-n">82</div><div class="stat-l">Templates</div></div>
+    <div class="stat-cell"><div class="stat-n">70+</div><div class="stat-l">AI Prompts</div></div>
+    <div class="stat-cell"><div class="stat-n">3</div><div class="stat-l">AI Tools</div></div>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track" aria-hidden="true">
+    <span class="mi">Daily Brain</span><span class="mi">Goals & Vision</span><span class="mi">Projects</span><span class="mi">Content Studio</span><span class="mi">Work & Career</span><span class="mi">AI Command Center</span><span class="mi">Knowledge Base</span><span class="mi">Finance & Business</span><span class="mi">Life & Wellness</span><span class="mi">Calendar & Scheduling</span><span class="mi">Corporate Layer</span><span class="mi">Portfolio & Brand</span><span class="mi">Raycast Bonus</span>
+    <span class="mi">Daily Brain</span><span class="mi">Goals & Vision</span><span class="mi">Projects</span><span class="mi">Content Studio</span><span class="mi">Work & Career</span><span class="mi">AI Command Center</span><span class="mi">Knowledge Base</span><span class="mi">Finance & Business</span><span class="mi">Life & Wellness</span><span class="mi">Calendar & Scheduling</span><span class="mi">Corporate Layer</span><span class="mi">Portfolio & Brand</span><span class="mi">Raycast Bonus</span>
+  </div>
+</div>
+
+<!-- VAULT CONTENTS -->
+<div class="sf" id="inside">
+  <div class="sfi">
+    <p class="eyebrow reveal">What's inside</p>
+    <h2 class="reveal">Every system you need.<br />Nothing you don't.</h2>
+    <p class="sub reveal">Thirteen folders built around the real operating loops of modern work: planning, creation, knowledge, business, career, and AI execution.</p>
+
+    <div class="vault-grid reveal">
+      <div class="vc"><div class="vn">00 / Start Here</div><div class="vt">Quick Start System</div><div class="vd">Guided onboarding so you're set up and running in under 10 minutes.</div><div class="vct">4 files</div></div>
+      <div class="vc"><div class="vn">01 / Daily Brain</div><div class="vt">Daily Notes & Reviews</div><div class="vd">Daily note, weekly review, monthly review, idea inbox, brain dump.</div><div class="vct">5 files</div></div>
+      <div class="vc"><div class="vn">02 / Goals & Vision</div><div class="vt">Annual Goals & Habits</div><div class="vd">Annual goals, 90-day sprints, vision boards, goal breakdowns, habit tracker.</div><div class="vct">5 files</div></div>
+      <div class="vc"><div class="vn">03 / Projects</div><div class="vt">Project Management</div><div class="vd">Project hub, briefs, meeting notes, retrospectives, task boards, SOPs, resource planning.</div><div class="vct">7 files</div></div>
+      <div class="vc"><div class="vn">04 / Content Studio</div><div class="vt">Creator Toolkit</div><div class="vd">Content calendar, post planner, video scripts, newsletters, repurposing flows, viral hook bank.</div><div class="vct">6 files</div></div>
+      <div class="vc"><div class="vn">05 / Work & Career</div><div class="vt">Professional OS</div><div class="vd">Work dashboard, 1-on-1 prep, performance reviews, email drafts, job tracking, CRM, decision journal.</div><div class="vct">8 files</div></div>
+      <div class="vc"><div class="vn">06 / AI Command Center</div><div class="vt">Prompt Library</div><div class="vd">Master prompt library, writing, brainstorming, summarization, research prompts, Custom GPT tracker.</div><div class="vct">6 files</div></div>
+      <div class="vc"><div class="vn">07 / Knowledge Base</div><div class="vt">Your Second Brain</div><div class="vd">Book notes, course notes, article vault, evergreen notes, resource library, media tracker.</div><div class="vct">6 files</div></div>
+      <div class="vc"><div class="vn">08 / Finance & Business</div><div class="vt">Money & Business</div><div class="vd">Income tracker, expense log, side hustle dashboard, business idea vault, launch checklist.</div><div class="vct">5 files</div></div>
+      <div class="vc"><div class="vn">09 / Life & Wellness</div><div class="vt">Personal System</div><div class="vd">Fitness tracker, meal planner, journal, gratitude log, travel planner.</div><div class="vct">5 files</div></div>
+      <div class="vc"><div class="vn">10 / Calendar & Scheduling</div><div class="vt">Time Management</div><div class="vd">Monthly calendar, editorial calendar, launch calendar, time blocking, deadline tracker.</div><div class="vct">6 files</div></div>
+      <div class="vc"><div class="vn">11 / Corporate Layer</div><div class="vt">9-to-5 Survival Kit</div><div class="vd">Outlook capture, email action extractor, SharePoint links, Teams follow-ups, stakeholder map.</div><div class="vct">8 files</div></div>
+      <div class="vc"><div class="vn">12 / Portfolio & Brand</div><div class="vt">Personal Brand Engine</div><div class="vd">Case study generator, portfolio entries, results log, skills snapshot, bio generator, LinkedIn templates.</div><div class="vct">7 files</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- AI SECTION -->
+<div class="sf">
+  <div class="sfi">
+    <div class="ai-layout">
+      <div>
+        <p class="eyebrow reveal">AI-native</p>
+        <h2 class="reveal">Built for the AI layer<br />you already use.</h2>
+        <p class="sub reveal">Every template ships with tool-agnostic prompts for ChatGPT, Claude, and Gemini. The vault gives your AI context, constraints, and a place to put the output.</p>
+        <div class="agent-card reveal">
+          <div class="agent-label">Agent-ready YAML</div>
+          <div class="agent-text">Structured frontmatter on every file means AI agents can read, navigate, and act across your vault. Built for today. Ready for what comes in v2.0 and v3.0.</div>
+        </div>
+      </div>
+      <div class="ai-tools reveal">
+        <div class="at"><div class="at-icon"><img src="assets/openai-logo.svg" alt="OpenAI logo" /></div><div><div class="at-name">ChatGPT</div><div class="at-sub">For planning, drafting, and fast iteration</div></div></div>
+        <div class="at"><div class="at-icon"><img src="assets/claude-logo.svg" alt="Claude logo" /></div><div><div class="at-name">Claude</div><div class="at-sub">For deep thinking and long-form work</div></div></div>
+        <div class="at"><div class="at-icon"><img src="assets/gemini-logo.svg" alt="Gemini logo" /></div><div><div class="at-name">Gemini</div><div class="at-sub">For research and Google-native workflows</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<div class="sf">
+  <div class="sfi">
+    <p class="eyebrow reveal">Why it works</p>
+    <h2 class="reveal">A system, not a folder dump.</h2>
+    <p class="sub reveal">A single master standard governs every file. The result feels intentional: named, linked, prompt-ready, and easy to extend.</p>
+    <div class="feat-grid reveal">
+      <div class="fc"><div class="fi">01</div><div class="ft">Plug & Play</div><div class="fd">Drop it into Obsidian and start. No scripts, no configuration. Open a template and it works.</div></div>
+      <div class="fc"><div class="fi">AI</div><div class="ft">70+ AI Prompts</div><div class="fd">Purpose-built prompts in every template. Each one tells you what to fill in and what to do with the output.</div></div>
+      <div class="fc"><div class="fi">↔</div><div class="ft">Cross-Linked</div><div class="fd">Every template links to related files across the vault. Your notes connect the way a second brain should.</div></div>
+      <div class="fc"><div class="fi">YML</div><div class="ft">One Standard</div><div class="fd">Uniform YAML, consistent formatting, a naming convention that scales. Built from a master reference document.</div></div>
+      <div class="fc"><div class="fi">V3</div><div class="ft">Future-Proof</div><div class="fd">Agent-ready frontmatter means your vault upgrades with you. v1.0 foundation. v2.0 and v3.0 ready.</div></div>
+      <div class="fc"><div class="fi">OS</div><div class="ft">Built for Creators</div><div class="fd">Not generic productivity dressed as a system. Designed around how creators and professionals actually work.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- RAYCAST -->
+<div class="sf">
+  <div class="sfi">
+    <p class="eyebrow reveal">Bonus</p>
+    <h2 class="reveal" style="margin-bottom: 36px;">Raycast Integration Pack.</h2>
+    <div class="rc-card reveal">
+      <div class="rc-left">
+        <div class="rc-badge">Mac Exclusive</div>
+        <div class="rc-title">20 prompts.<br />Zero context switching.</div>
+        <div class="rc-desc">The top 20 AI prompts from the vault, packaged as ready-to-fire Raycast snippets. Trigger your best prompts from anywhere on your Mac without opening a single app.</div>
+        <a class="rc-link" href="bonus.html">View the Raycast bonus</a>
+      </div>
+      <div class="rc-right">
+        <div class="si"><span class="sk">!braindump</span><span class="sl">Guided brain dump</span></div>
+        <div class="si"><span class="sk">!weeklyreview</span><span class="sl">Weekly review kickoff</span></div>
+        <div class="si"><span class="sk">!contentangle</span><span class="sl">Content angle generator</span></div>
+        <div class="si"><span class="sk">!hooklist</span><span class="sl">Viral hook variations</span></div>
+        <div class="si"><span class="sk">!summarize</span><span class="sl">Smart article summarizer</span></div>
+        <div class="si"><span class="sk">!goalbreakdown</span><span class="sl">90-day goal planner</span></div>
+        <div class="sm">+ 14 more in the pack</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<div class="sf" id="pricing">
+  <div class="sfi" style="text-align: center;">
+    <p class="eyebrow reveal" style="justify-content: center;">Pricing</p>
+    <h2 class="reveal" style="margin-bottom: 10px;">One price. Everything included.</h2>
+    <p class="sub reveal" style="margin: 0 auto 44px;">No subscriptions. Buy once, use forever. Upgrade discounts for v2.0 and v3.0 buyers.</p>
+    <div class="pricing-wrap">
+      <div class="pc reveal">
+        <div class="pt">
+          <div class="ptag">v1.0 — Launch pricing</div>
+          <div class="pamt"><span class="pmain">$37</span><span class="pwas">$57</span></div>
+          <div class="pdesc">One-time payment. Instant Gumroad download.</div>
+          <div class="pitems">
+            <div class="pitem">13 structured vault folders</div>
+            <div class="pitem">82 plug-and-play templates</div>
+            <div class="pitem">70+ AI prompts (ChatGPT, Claude & Gemini)</div>
+            <div class="pitem">Agent-ready YAML frontmatter on every file</div>
+            <div class="pitem">Quick Start Guide + 7-day onboarding</div>
+            <div class="pitem">Raycast Integration Bonus (Mac)</div>
+            <div class="pitem">All future v1.0 updates</div>
+          </div>
+        </div>
+        <div class="pb">
+          <a class="btn-full" href="https://theproductivityos.gumroad.com/l/productivity-vault" target="_blank" rel="noopener noreferrer">Get The Productivity Vault - $37</a>
+          <div class="up-note"><strong>Upgrade path included.</strong> Buyers get discounted access to v2.0 (MCP + agent workflows, $57) and v3.0 (full AI OS, $97) when they launch.</div>
+          <div class="pfine">Secure checkout via Gumroad · Instant download</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="sf" id="faq">
+  <div class="sfi">
+    <p class="eyebrow reveal">FAQ</p>
+    <h2 class="reveal" style="margin-bottom: 36px;">Common questions.</h2>
+    <div class="faq-grid reveal">
+      <div class="fq"><div class="fqq">Do I need Obsidian plugins?</div><div class="fqa">The vault uses the Templater plugin for dynamic date fields. It's free and takes about 2 minutes to install. The Quick Start Guide walks you through it. Everything else is standard Obsidian markdown.</div></div>
+      <div class="fq"><div class="fqq">Which AI tools does this work with?</div><div class="fqa">Every prompt is tool-agnostic and tested with ChatGPT, Claude, and Gemini. You don't need a paid plan for any of them, though stronger models return better results.</div></div>
+      <div class="fq"><div class="fqq">Is this Mac-only?</div><div class="fqa">The vault runs on any platform Obsidian supports — Mac, Windows, Linux, iOS, and Android. The Raycast Integration Bonus is Mac-exclusive since Raycast is a Mac app.</div></div>
+      <div class="fq"><div class="fqq">What are v2.0 and v3.0?</div><div class="fqa">v2.0 adds MCP agent workflows, Raycast AI commands, and Claude Projects as skills ($57). v3.0 builds a full multi-model AI OS layer on top ($97). Existing buyers always get upgrade discounts.</div></div>
+      <div class="fq"><div class="fqq">Can I use this with an existing vault?</div><div class="fqa">Yes. Drop the entire folder structure into your existing vault or run it standalone. The consistent file ID prefix system means no conflicts with your existing notes.</div></div>
+      <div class="fq"><div class="fqq">Is there a refund policy?</div><div class="fqa">All sales are final since this is a digital download. The Quick Start Guide and folder previews give you a clear picture of exactly what's inside before you buy.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM CTA -->
+<div class="cta-section">
+  <div class="cta-glow"></div>
+  <h2 class="reveal">Stop rebuilding from scratch.</h2>
+  <p class="reveal">Your vault. Your system. Ready on day one.</p>
+  <a class="btn-primary reveal" href="https://theproductivityos.gumroad.com/l/productivity-vault" target="_blank" rel="noopener noreferrer">
+    Get instant access - $37
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a class="fl-logo" href="index.html">The Productivity OS</a>
+  <div class="fl-links">
+    <a class="fl-link" href="inside.html">Inside</a>
+    <a class="fl-link" href="start.html">Start</a>
+    <a class="fl-link" href="ai-workflows.html">AI Workflows</a>
+    <a class="fl-link" href="bonus.html">Bonus</a>
+    <a class="fl-link" href="support.html">Support</a>
+    <a class="fl-link" href="#pricing">Pricing</a>
+    <a class="fl-link" href="https://theproductivityos.gumroad.com/l/productivity-vault" target="_blank" rel="noopener noreferrer">Buy Now</a>
+  </div>
+  <div class="fl-copy">© 2026 theproductivityos.co</div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in'), 60);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  const ham = document.querySelector('.nav-hamburger');
+  const mob = document.getElementById('nav-mobile');
+  if (ham && mob) {
+    ham.addEventListener('click', () => {
+      const open = mob.classList.toggle('open');
+      ham.setAttribute('aria-expanded', open);
+      mob.setAttribute('aria-hidden', !open);
+    });
+    mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mob.classList.remove('open');
+      ham.setAttribute('aria-expanded', 'false');
+      mob.setAttribute('aria-hidden', 'true');
+    }));
+  }
+</script>
+
+</body>
+</html>
